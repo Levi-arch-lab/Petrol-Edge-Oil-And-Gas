@@ -1,0 +1,725 @@
+{% extends 'base_front.html' %}
+{% load static %}
+
+{% block title %}Petro Edge Oil & Gas - Home{% endblock %}
+
+{% block content %}
+    <!-- Live Market Ticker -->
+    <div class="bg-slate-900 text-white py-2 overflow-hidden border-b border-gray-800">
+        <div class="flex items-center gap-8 animate-marquee whitespace-nowrap">
+            <span class="flex items-center gap-2 text-xs font-mono"><span class="text-green-400">▲</span> CRUDE OIL (WTI) <span class="font-bold">$78.45</span></span>
+            <span class="flex items-center gap-2 text-xs font-mono"><span class="text-red-400">▼</span> NATURAL GAS <span class="font-bold">$2.84</span></span>
+            <span class="flex items-center gap-2 text-xs font-mono"><span class="text-green-400">▲</span> BRENT CRUDE <span class="font-bold">$82.10</span></span>
+            <span class="flex items-center gap-2 text-xs font-mono"><span class="text-green-400">▲</span> GOLD <span class="font-bold">$2,045.30</span></span>
+            <span class="flex items-center gap-2 text-xs font-mono"><span class="text-green-400">▲</span> BITCOIN <span class="font-bold">$42,350.00</span></span>
+            <span class="flex items-center gap-2 text-xs font-mono"><span class="text-green-400">▲</span> TDI SHARES <span class="font-bold">$42.85</span></span>
+            <!-- Duplicate for loop -->
+            <span class="flex items-center gap-2 text-xs font-mono"><span class="text-green-400">▲</span> CRUDE OIL (WTI) <span class="font-bold">$78.45</span></span>
+            <span class="flex items-center gap-2 text-xs font-mono"><span class="text-red-400">▼</span> NATURAL GAS <span class="font-bold">$2.84</span></span>
+            <span class="flex items-center gap-2 text-xs font-mono"><span class="text-green-400">▲</span> BRENT CRUDE <span class="font-bold">$82.10</span></span>
+            <span class="flex items-center gap-2 text-xs font-mono"><span class="text-green-400">▲</span> GOLD <span class="font-bold">$2,045.30</span></span>
+            <span class="flex items-center gap-2 text-xs font-mono"><span class="text-green-400">▲</span> BITCOIN <span class="font-bold">$42,350.00</span></span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <!-- <section class="relative h-[600px] md:h-[700px] flex items-center overflow-hidden"> -->
+    <section class="relative h-[600px] md:h-[700px] flex items-start pt-20 overflow-hidden">
+        <!-- Background Video/Image -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent z-10"></div>
+            <img src="{% static 'images/PetroEdgeBg.png' %}" alt="Offshore rig at sunset" class="w-full h-full object-cover animate-pan">
+        </div>
+
+        <div class="w-full pl-8 relative z-20">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 animate-fade-in-up">
+                    <span class="relative flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    <span class="text-sm font-medium text-white tracking-wide">Pioneering Sustainable Energy</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-6 animate-fade-in-up delay-100">
+                    Energy for a <br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Limitless Future.</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed animate-fade-in-up delay-200">
+                    We combine advanced AI-driven exploration with sustainable extraction technologies to power the world's next generation of growth.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
+                    <a href="{% url 'investment_plan' %}" class="bg-primary hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-blue-500/30 transition-all hover:scale-105 flex items-center justify-center gap-2">
+                        Start Investing
+                        <span class="material-symbols-outlined">trending_up</span>
+                    </a>
+                    <a href="{% url 'about' %}" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all flex items-center justify-center gap-2 group">
+                        Discover Our Tech
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quick Stats Widget Abstract -->
+        <div class="absolute bottom-0 right-0 p-8 hidden lg:block z-20 animate-fade-in-left delay-500">
+            <div class="bg-slate-900/80 backdrop-blur-xl p-6 rounded-2xl border border-white/10 shadow-2xl max-w-xs">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                         <span class="material-symbols-outlined text-green-500">eco</span>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Carbon Offset</p>
+                        <p class="text-xl font-bold text-white">2.4M Tons</p>
+                    </div>
+                </div>
+                 <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+                        <img src="{% static 'images/logo.png' %}" alt="Petro Edge Logo" class="h-10 w-auto">
+
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Daily Output</p>
+                        <p class="text-xl font-bold text-white">450k Barrels</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Logo Strip -->
+    <section class="py-8 bg-surface-light dark:bg-surface-dark border-y border-gray-100 dark:border-gray-800 overflow-hidden">
+        <div class="px-4 md:px-8 mb-6 text-center">
+            <p class="text-sm font-bold text-text-sec-light dark:text-text-sec-dark uppercase tracking-wider">Trusted by Industry Leaders</p>
+        </div>
+        <div class="relative flex overflow-x-hidden">
+            <div class="animate-marquee whitespace-nowrap flex items-center gap-12 px-4">
+                <span class="text-2xl font-bold text-gray-400 dark:text-gray-600 flex items-center gap-2"><span class="material-symbols-outlined">diamond</span> APEX ENERGY</span>
+                <img src="{% static 'images/logo.png' %}" alt="Petro Edge Logo" class="h-10 w-auto">
+                <span class="text-2xl font-bold text-gray-400 dark:text-gray-600 flex items-center gap-2"><span class="material-symbols-outlined">bolt</span> VOLT DYNAMICS</span>
+                <span class="text-2xl font-bold text-gray-400 dark:text-gray-600 flex items-center gap-2"><span class="material-symbols-outlined">hub</span> GLOBAL CORE</span>
+                <span class="text-2xl font-bold text-gray-400 dark:text-gray-600 flex items-center gap-2"><span class="material-symbols-outlined">public</span> TERRA FIRMA</span>
+                <!-- Duplicate for seamless loop -->
+                <span class="text-2xl font-bold text-gray-400 dark:text-gray-600 flex items-center gap-2"><span class="material-symbols-outlined">diamond</span> APEX ENERGY</span>
+                <img src="{% static 'images/logo.png' %}" alt="Petro Edge Logo" class="h-10 w-auto">
+                <span class="text-2xl font-bold text-gray-400 dark:text-gray-600 flex items-center gap-2"><span class="material-symbols-outlined">bolt</span> VOLT DYNAMICS</span>
+                <span class="text-2xl font-bold text-gray-400 dark:text-gray-600 flex items-center gap-2"><span class="material-symbols-outlined">hub</span> GLOBAL CORE</span>
+                <span class="text-2xl font-bold text-gray-400 dark:text-gray-600 flex items-center gap-2"><span class="material-symbols-outlined">public</span> TERRA FIRMA</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter Section -->
+    <section class="py-12 bg-white dark:bg-surface-dark border-b border-gray-100 dark:border-gray-800">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-100 dark:divide-gray-800">
+                <div class="group">
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-primary mb-2 group-hover:scale-110 transition-transform">20+</h3>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest font-semibold">Years Experience</p>
+                </div>
+                 <div class="group">
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-primary mb-2 group-hover:scale-110 transition-transform">3.5k</h3>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest font-semibold">Employees</p>
+                </div>
+                 <div class="group">
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-primary mb-2 group-hover:scale-110 transition-transform">120</h3>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest font-semibold">Active Rigs</p>
+                </div>
+                 <div class="group">
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-primary mb-2 group-hover:scale-110 transition-transform">15</h3>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest font-semibold">Global Awards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-Time Forex Chart (TradingView) -->
+    <section class="py-12 bg-gray-50 dark:bg-surface-dark/30 border-y border-gray-100 dark:border-gray-800">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-8">
+                <span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block">Live Market Data</span>
+                <h2 class="text-3xl font-bold text-text-main-light dark:text-text-main-dark">Global Currency Markets</h2>
+            </div>
+            <div class="h-[500px] rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container" style="height:100%;width:100%">
+                    <div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                    {
+                    "autosize": true,
+                    "symbol": "FX:EURUSD",
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "dark",
+                    "style": "1",
+                    "locale": "en",
+                    "enable_publishing": false,
+                    "allow_symbol_change": true,
+                    "calendar": false,
+                    "support_host": "https://www.tradingview.com"
+                    }
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Teaser -->
+    <section class="py-16 md:py-24 px-4 md:px-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="w-full md:w-1/2 relative group">
+                <div class="absolute -inset-4 bg-gradient-to-r from-primary to-blue-400 rounded-3xl opacity-20 blur-xl group-hover:opacity-30 transition-opacity"></div>
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500 hover:-translate-y-2">
+                    <img src="{% static 'images/offshore_platform.jpg' %}" alt="Offshore rig platform" class="w-full h-auto object-cover"/>
+                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <!-- Floating Card -->
+                <div class="absolute -bottom-10 -right-10 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 max-w-[220px] animate-float z-10 hidden md:block">
+                    <div class="flex items-center gap-3 mb-3">
+                         <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                         <span class="text-xs font-bold uppercase text-gray-400">System Status</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-800 dark:text-white mb-1">Operational</p>
+                    <p class="text-xs text-gray-500">All systems functioning at 98.5% efficiency.</p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block">Who We Are</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-text-main-light dark:text-text-main-dark mb-6 leading-tight">Redefining Energy Exploration.</h2>
+                <p class="text-lg text-text-sec-light dark:text-text-sec-dark mb-6 leading-relaxed">
+                    Petro Edge Oil & Gas combines decades of expertise with cutting-edge technology to deliver sustainable, efficient, and profitable energy solutions. From deep-sea extraction to renewable transitions, we are powering the world's future.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="{% url 'about' %}" class="bg-surface-light dark:bg-surface-dark border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-3 px-8 rounded-lg transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
+                        Our Story
+                    </a>
+                    <a href="{% url 'services' %}" class="flex items-center justify-center gap-2 text-text-main-light dark:text-text-main-dark font-bold hover:text-primary transition-colors px-4 py-3">
+                        View Services <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Operations Map -->
+    <section class="py-20 px-4 md:px-8 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg')] bg-no-repeat bg-center bg-contain opacity-10"></div>
+        <div class="max-w-7xl mx-auto relative z-10 text-center">
+            <span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block">Global Reach</span>
+            <h2 class="text-3xl md:text-5xl font-bold mb-12">Powering the World</h2>
+            
+            <div class="relative w-full max-w-4xl mx-auto h-[300px] md:h-[500px] rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm p-8 flex items-center justify-center">
+                <p class="text-gray-400">Interactive Global Map Module</p>
+                <!-- Decorative Hotspots -->
+                <div class="absolute top-[30%] left-[20%] w-4 h-4 bg-primary rounded-full animate-ping"></div>
+                <div class="absolute top-[30%] left-[20%] w-4 h-4 bg-primary rounded-full"></div>
+                
+                <div class="absolute top-[40%] right-[30%] w-4 h-4 bg-green-500 rounded-full animate-ping delay-300"></div>
+                <div class="absolute top-[40%] right-[30%] w-4 h-4 bg-green-500 rounded-full"></div>
+                
+                <div class="absolute bottom-[30%] left-[50%] w-4 h-4 bg-amber-500 rounded-full animate-ping delay-700"></div>
+                <div class="absolute bottom-[30%] left-[50%] w-4 h-4 bg-amber-500 rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="material-symbols-outlined text-5xl text-primary mb-4">mark_email_unread</span>
+            <h2 class="text-3xl font-bold mb-4">Market Insights, Delivered.</h2>
+            <p class="text-gray-500 mb-8 max-w-lg mx-auto">Get weekly analysis on energy trends, stock performance, and company updates directly to your inbox.</p>
+            
+            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Enter your email address" class="flex-1 px-6 py-4 rounded-xl bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-primary outline-none transition-all" />
+                <button type="button" class="bg-primary hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all transform hover:scale-105">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Services Carousel -->
+    <section class="py-12 md:py-16 px-4 md:px-8">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-2xl md:text-3xl font-bold">Core Services</h3>
+            <a class="text-primary text-sm font-medium hover:underline flex items-center gap-1" href="{% url 'services' %}">
+                View All <span class="material-symbols-outlined text-sm">chevron_right</span>
+            </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col gap-4 card-hover">
+                <div class="w-14 h-14 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xl mb-2">Precision Drilling</h4>
+                    <p class="text-text-sec-light dark:text-text-sec-dark">High-efficiency extraction with minimal ecological footprint using smart sensors.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col gap-4 card-hover">
+                <div class="w-14 h-14 rounded-xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-purple-600">
+                    <span class="material-symbols-outlined text-2xl">radar</span>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xl mb-2">Seismic Exploration</h4>
+                    <p class="text-text-sec-light dark:text-text-sec-dark">Advanced 4D mapping technology to identify reserves with 99% accuracy.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col gap-4 card-hover">
+                <div class="w-14 h-14 rounded-xl bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center text-amber-600">
+                    <span class="material-symbols-outlined text-2xl">factory</span>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xl mb-2">Refining & Sales</h4>
+                    <p class="text-text-sec-light dark:text-text-sec-dark">End-to-end production pipeline delivering directly to global markets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operations Showcase -->
+    <section class="py-16 md:py-24 px-4 md:px-8 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block">Our Facilities</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">World-Class Operations</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">State-of-the-art infrastructure powering global energy demands across multiple continents.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Facility 1 -->
+                <div class="group relative overflow-hidden rounded-2xl h-80 cursor-pointer">
+                    <img src="{% static 'images/storage_tanks_night.jpg' %}" alt="Storage facility at night" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 transform group-hover:-translate-y-2 transition-transform duration-300">
+                        <span class="inline-block px-3 py-1 bg-primary/80 text-white text-xs font-bold rounded-full mb-3">Storage</span>
+                        <h3 class="text-xl font-bold mb-2">Strategic Reserves</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">450,000 barrel capacity across 12 advanced storage facilities with real-time monitoring.</p>
+                    </div>
+                </div>
+                
+                <!-- Facility 2 -->
+                <div class="group relative overflow-hidden rounded-2xl h-80 cursor-pointer">
+                    <img src="{% static 'images/pipeline_worker.jpg' %}" alt="Pipeline operations" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 transform group-hover:-translate-y-2 transition-transform duration-300">
+                        <span class="inline-block px-3 py-1 bg-green-500/80 text-white text-xs font-bold rounded-full mb-3">Pipeline</span>
+                        <h3 class="text-xl font-bold mb-2">Distribution Network</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">2,400 km of smart pipelines with automated pressure regulation and leak detection.</p>
+                    </div>
+                </div>
+                
+                <!-- Facility 3 -->
+                <div class="group relative overflow-hidden rounded-2xl h-80 cursor-pointer">
+                    <img src="{% static 'images/offshore_platform.jpg' %}" alt="Offshore drilling platform" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 transform group-hover:-translate-y-2 transition-transform duration-300">
+                        <span class="inline-block px-3 py-1 bg-amber-500/80 text-white text-xs font-bold rounded-full mb-3">Offshore</span>
+                        <h3 class="text-xl font-bold mb-2">Deep Sea Platforms</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">120 active rigs extracting from depths up to 3,000 meters with minimal environmental impact.</p>
+                    </div>
+                </div>
+                
+                <!-- Facility 4 -->
+                <div class="group relative overflow-hidden rounded-2xl h-80 cursor-pointer md:col-span-2 lg:col-span-1">
+                    <img src="{% static 'images/refinery_plant.jpg' %}" alt="Refinery processing plant" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 transform group-hover:-translate-y-2 transition-transform duration-300">
+                        <span class="inline-block px-3 py-1 bg-blue-500/80 text-white text-xs font-bold rounded-full mb-3">Refinery</span>
+                        <h3 class="text-xl font-bold mb-2">Processing Facilities</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Advanced refinery complex processing 200,000 barrels per day into premium-grade products.</p>
+                    </div>
+                </div>
+                
+                <!-- Facility 5 - Full Width -->
+                <div class="group relative overflow-hidden rounded-2xl h-80 cursor-pointer md:col-span-2">
+                    <img src="{% static 'images/sunset_oil_rig.jpg' %}" alt="Sunset drilling operations" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 transform group-hover:-translate-y-2 transition-transform duration-300">
+                        <span class="inline-block px-3 py-1 bg-purple-500/80 text-white text-xs font-bold rounded-full mb-3">Fleet</span>
+                        <h3 class="text-xl font-bold mb-2">Maritime Operations</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Integrated fleet of 45 vessels supporting offshore operations with 24/7 logistics and supply chain management.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="{% url 'services' %}" class="inline-flex items-center gap-2 bg-primary hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all hover:scale-105">
+                    Explore All Operations
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Dashboard Widget -->
+    <section class="px-4 md:px-8 py-12">
+        <div class="bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/5 rounded-2xl border border-primary/20 shadow-lg p-6 md:p-10 max-w-5xl mx-auto card-hover">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="font-bold text-xl md:text-2xl flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary">trending_up</span>
+                    Market Performance
+                </h3>
+                <span class="text-xs md:text-sm font-mono text-text-sec-light dark:text-text-sec-dark bg-white/50 dark:bg-black/30 px-3 py-1 rounded-full">Live Updates</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Investment Plan A -->
+                <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-100 dark:border-gray-800">
+                    <div class="flex justify-between items-end mb-3">
+                        <div>
+                            <p class="text-sm font-medium text-text-sec-light dark:text-text-sec-dark">Growth Bond (Series A)</p>
+                            <p class="text-3xl font-bold tracking-tight">5.2% <span class="text-sm font-normal text-green-500 ml-1">APY</span></p>
+                        </div>
+                        <div class="h-10 w-28 bg-green-50 dark:bg-green-900/20 rounded-lg flex items-center justify-center">
+                            <svg fill="none" height="30" viewbox="0 0 100 30" width="100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 25C12 23 15 20 20 17C25 14 30 19 35 15C40 11 45 17 55 10C60 7 70 13 99 6" stroke="#22c55e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="w-full bg-gray-100 dark:bg-gray-700 h-2 rounded-full overflow-hidden">
+                        <div class="bg-green-500 h-full rounded-full animate-pulse" style="width: 75%"></div>
+                    </div>
+                    <p class="text-sm text-text-sec-light dark:text-text-sec-dark mt-2 text-right">75% Subscribed</p>
+                </div>
+                <!-- Investment Plan B -->
+                <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-100 dark:border-gray-800">
+                    <div class="flex justify-between items-end mb-6">
+                        <div>
+                            <p class="text-sm font-medium text-text-sec-light dark:text-text-sec-dark">Equity Shares (TDI)</p>
+                            <p class="text-3xl font-bold tracking-tight">$42.85 <span class="text-sm font-normal text-primary ml-1">+1.4%</span></p>
+                        </div>
+                        <div class="h-10 w-28 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
+                            <svg fill="none" height="30" viewbox="0 0 100 30" width="100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 23C10 23 15 27 25 20C35 13 40 17 50 15C60 13 65 10 99 7" stroke="#137fec" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <button class="w-full py-3 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all">
+                        View Portfolio Details
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Grid -->
+    <section class="py-12 md:py-16 px-4 md:px-8">
+        <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center">Why Petro Edge Oil & Gas?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-colors card-hover text-center">
+                <span class="material-symbols-outlined text-primary mb-4 text-4xl">psychology</span>
+                <h5 class="font-bold text-lg mb-2">AI Analysis</h5>
+                <p class="text-text-sec-light dark:text-text-sec-dark">Predictive maintenance models reduce downtime.</p>
+            </div>
+            <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-green-500/50 transition-colors card-hover text-center">
+                <span class="material-symbols-outlined text-green-500 mb-4 text-4xl">eco</span>
+                <h5 class="font-bold text-lg mb-2">Eco-Friendly</h5>
+                <p class="text-text-sec-light dark:text-text-sec-dark">Zero-spill commitment & carbon capture rigs.</p>
+            </div>
+            <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-amber-500/50 transition-colors card-hover text-center">
+                <span class="material-symbols-outlined text-amber-500 mb-4 text-4xl">safety_check</span>
+                <h5 class="font-bold text-lg mb-2">Safety First</h5>
+                <p class="text-text-sec-light dark:text-text-sec-dark">Industry-leading safety protocols (ISO 45001).</p>
+            </div>
+            <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-purple-500/50 transition-colors card-hover text-center">
+                <span class="material-symbols-outlined text-purple-500 mb-4 text-4xl">rocket_launch</span>
+                <h5 class="font-bold text-lg mb-2">Innovation</h5>
+                <p class="text-text-sec-light dark:text-text-sec-dark">Developing next-gen drilling technologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Insights (Blog) -->
+    <section class="py-12 md:py-20 px-4 md:px-8 bg-gray-50 dark:bg-surface-dark/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                <div>
+                    <span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block">Latest Insights</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-main-light dark:text-text-main-dark">Industry News & Updates</h2>
+                </div>
+                <a href="#" class="text-primary font-bold hover:underline flex items-center gap-1">View All Posts <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Post 1 -->
+                <article class="group bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 flex flex-col h-full card-hover">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="{% static 'images/storage_tanks_night.jpg' %}" alt="Storage tanks at night" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"/>
+                        <span class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Innovation</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center gap-2 text-xs text-text-sec-light dark:text-text-sec-dark mb-3">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> Oct 24, 2025</span>
+                            <span>•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main-light dark:text-text-main-dark mb-3 group-hover:text-primary transition-colors">The Future of AI in Deep Sea Exploration</h3>
+                        <p class="text-sm text-text-sec-light dark:text-text-sec-dark mb-4 line-clamp-3">How machine learning models are predicting reserve locations with 98% accuracy, reducing environmental impact and cost.</p>
+                        <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                            <span class="text-sm font-bold text-primary flex items-center gap-1 group-hover:gap-2 transition-all">Read Article <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Post 2 -->
+                <article class="group bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 flex flex-col h-full card-hover">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="{% static 'images/pipeline_worker.jpg' %}" alt="Pipeline worker at facility" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"/>
+                        <span class="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Sustainability</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center gap-2 text-xs text-text-sec-light dark:text-text-sec-dark mb-3">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> Oct 18, 2025</span>
+                            <span>•</span>
+                            <span>3 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main-light dark:text-text-main-dark mb-3 group-hover:text-primary transition-colors">Achieving Net-Zero Drilling Operations</h3>
+                        <p class="text-sm text-text-sec-light dark:text-text-sec-dark mb-4 line-clamp-3">Our roadmap to reducing carbon footprint by 40% across all active rigs through hybridization and solar integration.</p>
+                        <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                            <span class="text-sm font-bold text-primary flex items-center gap-1 group-hover:gap-2 transition-all">Read Article <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="group bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 flex flex-col h-full card-hover">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="{% static 'images/refinery_plant.jpg' %}" alt="Refinery processing plant" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"/>
+                        <span class="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Market</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center gap-2 text-xs text-text-sec-light dark:text-text-sec-dark mb-3">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> Oct 10, 2025</span>
+                            <span>•</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main-light dark:text-text-main-dark mb-3 group-hover:text-primary transition-colors">Q3 Market Report & Analysis</h3>
+                        <p class="text-sm text-text-sec-light dark:text-text-sec-dark mb-4 line-clamp-3">A comprehensive breakdown of global oil prices, emerging market trends, and investment opportunities for Q4.</p>
+                        <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                            <span class="text-sm font-bold text-primary flex items-center gap-1 group-hover:gap-2 transition-all">Read Article <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Slider -->
+    <section class="py-12 md:py-16 px-4 md:px-8 bg-gray-50 dark:bg-surface-dark/50">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center">Client Voices</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 p-6 rounded-xl shadow-sm relative hover:shadow-md transition-shadow card-hover">
+                    <span class="material-symbols-outlined text-primary/20 absolute top-4 right-4 text-5xl">format_quote</span>
+                    <p class="text-lg italic text-text-main-light dark:text-text-main-dark mb-6 z-10 relative">"Petro Edge Oil and Gas's AI forecasting saved us millions in operational costs last quarter. Their technology stack is unmatched in the sector."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuon_bpCAwxO_qCeEd0ZhK9LuY6NjiDMqObuQVv--n_GBhPW3TNX3ONlPaHuUzjfyXk8WxxDzHO0R4ED2G_Enwv4y08CXC4UFFFAEg_3v5QvW46XAbbRgHHr4wZJtqLFQRR2sAR-JtONngJtX1ztkMB4HC6FWeKuzGfBG6ApfJwjlP75roBd_l-f37xjqf8-SQqCDL4poFdKRO9pc0plulYq-lTg1NahBGXVlUvaU-FOod21nL5R8RctToa0O-KsgQYsCtCG7JxZou");'></div>
+                        <div>
+                            <p class="text-base font-bold">Sarah Jenkins</p>
+                            <p class="text-sm text-text-sec-light dark:text-text-sec-dark uppercase tracking-wider">COO, Apex Energy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 p-6 rounded-xl shadow-sm relative hover:shadow-md transition-shadow card-hover">
+                    <span class="material-symbols-outlined text-primary/20 absolute top-4 right-4 text-5xl">format_quote</span>
+                    <p class="text-lg italic text-text-main-light dark:text-text-main-dark mb-6 z-10 relative">"A reliable partner for high-risk offshore projects. Their commitment to safety and environmental standards is commendable."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpAKiUJHbgXKNwPsa8RBxFD5ZHAxglpJcaqcBvYdMm4TOPxFWXZwY-i_2PQma2bFyjIeOvHixkyhMpDrHsw85daFXzMe5Y_WctAdZEUUODvbpB1amhG3EWUFcNRj8HJ3dfAWBqIYzmrRFQqWazqR_pSwVwWwPFj8XVs--liepCU9zM5Rf8B33h1pFxVAikAw1eohvSRynp2F4kpP5JBLGXSXZysKZvCQyN1tUpisj6RDzz7AwaqLVsQ1wG_WpiYk-PM4GM5gf1o0HF");'></div>
+                        <div>
+                            <p class="text-base font-bold">Marcus Chen</p>
+                            <p class="text-sm text-text-sec-light dark:text-text-sec-dark uppercase tracking-wider">Director, Global Oil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-12 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block">Common Questions</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-text-main-light dark:text-text-main-dark">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="flex flex-col gap-4">
+            <!-- FAQ Item 1 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    How do I start investing with Petro Edge Oil & Gas?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    Starting is simple. Create an account, verify your identity, and browse our available investment plans. You can start with as little as $500 in our Growth Bond series.
+                </div>
+            </details>
+            <!-- FAQ Item 2 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    What makes your drilling technology "Eco-Friendly"?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    We utilize closed-loop drilling systems that prevent ANY fluid discharge into the ocean. Additionally, our rigs are powered by hybrid systems combining wind, solar, and efficient generators, reducing emissions by up to 40%.
+                </div>
+            </details>
+            <!-- FAQ Item 3 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    Are my investments secure?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    Yes. All user funds are held in segregated, insured accounts. We employ bank-grade encryption and security protocols. Furthermore, our physical assets are fully insured against operational risks.
+                </div>
+            </details>
+             <!-- FAQ Item 4 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    What is the minimum withdrawal amount?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    The minimum withdrawal amount is $50. Withdrawals are processed within 24 hours and can be sent to your bank account or crypto wallet.
+                </div>
+            </details>
+             <!-- FAQ Item 5 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    Can I trade on mobile?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    Absolutely. Our dashboard and trading interfaces are fully responsive and optimized for mobile devices, allowing you to manage your portfolio from anywhere.
+                </div>
+            </details>
+            <!-- FAQ Item 6 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    What investment plans are available?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    We offer multiple investment tiers: Starter Plan (5% APY), Growth Bond Series A (7% APY), Premium Portfolio (10% APY), and Elite Investor packages with custom returns. Each plan has different minimum investment thresholds and lock-in periods.
+                </div>
+            </details>
+            <!-- FAQ Item 7 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    How often are dividends paid?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    Dividends are paid monthly for all investment plans. You can choose to receive them directly to your wallet or reinvest them automatically for compound growth.
+                </div>
+            </details>
+            <!-- FAQ Item 8 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    Where are your drilling operations located?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    We operate in over 15 countries across the Gulf of Mexico, North Sea, West Africa, and the Asia-Pacific region. Our headquarters is located in Jumeirah Lakes Towers (JLT), Cluster X Dubai, United Arab Emirates.
+                </div>
+            </details>
+            <!-- FAQ Item 9 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    What cryptocurrencies do you accept for deposits?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    We accept Bitcoin (BTC), Ethereum (ETH), USDT (TRC20 & ERC20), and USDC. Bank wire transfers and credit card payments are also available for fiat deposits.
+                </div>
+            </details>
+            <!-- FAQ Item 10 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    Is Petro Edge Oil & Gas a publicly traded company?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    Yes. TDI shares are publicly traded with a current value of $42.85 per share. You can purchase equity shares directly through our platform, giving you ownership stakes in our operations and quarterly dividend payouts.
+                </div>
+            </details>
+            <!-- FAQ Item 11 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    How do I verify my account?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    Account verification requires a government-issued ID (passport or driver's license) and proof of address. The verification process typically takes 24-48 hours. Verified accounts have higher withdrawal limits and access to premium features.
+                </div>
+            </details>
+            <!-- FAQ Item 12 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    What happens if oil prices drop significantly?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    Our diversified portfolio includes natural gas, renewable energy assets, and refining operations, which helps hedge against crude oil price volatility. Additionally, we use advanced futures contracts and hedging strategies to protect investor returns during market downturns.
+                </div>
+            </details>
+            <!-- FAQ Item 13 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    Can I refer friends and earn bonuses?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    Yes! Our referral program rewards you with 5% of your referral's first deposit, up to $500. Your referred friends also receive a $25 welcome bonus when they make their first investment. Referral bonuses are paid instantly to your account.
+                </div>
+            </details>
+            <!-- FAQ Item 14 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    How do I contact customer support?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    Our support team is available 24/7 via live chat, email (support@tethodrill.com), and phone. Premium investors have access to dedicated account managers. Average response time is under 2 hours for all inquiries.
+                </div>
+            </details>
+            <!-- FAQ Item 15 -->
+            <details class="group bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden card-hover">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-text-main-light dark:text-text-main-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    What certifications and licenses does Petro Edge Oil and Gas hold?
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-text-sec-light dark:text-text-sec-dark leading-relaxed">
+                    Petro Edge Oil & Gas is ISO 9001, ISO 14001, and ISO 45001 certified. We are licensed by the Securities and Exchange Commission (SEC) for investment services, and our drilling operations comply with OSHA, EPA, and international maritime regulations.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Call to Action Footer -->
+    <section class="py-20 px-4 md:px-8 bg-gradient-to-br from-primary to-primary-dark relative overflow-hidden text-center text-white">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+        
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Power Your Portfolio?</h2>
+            <p class="text-white/90 text-lg md:text-xl mb-10">Join thousands of investors and industry partners shaping the future of energy today.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="{% url 'dashboard' %}" class="bg-white text-primary font-bold py-4 px-10 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all text-lg">
+                    Get Started Now
+                </a>
+                <a href="{% url 'contact' %}" class="bg-transparent border-2 border-white text-white font-bold py-4 px-10 rounded-xl hover:bg-white/10 transition-all text-lg">
+                    Contact Sales
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
